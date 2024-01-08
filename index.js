@@ -13,7 +13,8 @@ const mongoDbUrl = "mongodb+srv://qathatcodes:iCRNCQjNdfUlcqcL@master-db.imskikq
 const User = mongoose.model("users",{
     name: String,
     username: String,
-    password: String
+    password: String,
+    token: String
 })
 
 app.use(express.json())
@@ -21,18 +22,18 @@ app.use(express.json())
 
 // In memory database
 const ALL_USERS = [{
-    username: "san@naik.com",
-    password: "misty",
-    name: "Sankalp Naik"
+    username: "rohit@sharma.com",
+    password: "hitman",
+    name: "Rohit Sharma"
 },
 {
-    username: "deep@achary.com",
-    password: "telugu",
-    name: "Deepika Achary"
+    username: "virat@kohli.com",
+    password: "king",
+    name: "Virat Kohli"
 },{
-    username: "misty@naik.com",
-    password: "daddyisbest",
-    name: "Misty Naik"
+    username: "jaspreet@bhumrah.com",
+    password: "boom",
+    name: "Jaspreet Bhumrah"
 }]
 
 // Function to validate if user exists in the in memory database
